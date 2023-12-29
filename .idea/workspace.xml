@@ -4,23 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a22333a-fadf-4951-babe-3c54bc5385bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameEngine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/GameEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boards/TicTacToeBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GameResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Player.java" afterDir="false" />
+    <list default="true" id="6a22333a-fadf-4951-babe-3c54bc5385bc" name="Changes" comment="(S) Isolation of concern &amp; Test">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/AIEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/GameEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/game/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/game/Move.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GamePlayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/api/AIEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/api/GameEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/api/RuleEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/boards/TicTacToeBoard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/GameState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/Move.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/GamePlayTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/RuleEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boards/TicTacToeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boards/TicTacToeBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Move.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +74,63 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.GamePlayTest">
+    <configuration name="GamePlayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GameEngine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePlayTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePlayTest.checkForColWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameEngine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePlayTest" />
+      <option name="METHOD_NAME" value="checkForColWin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePlayTest.checkForComputerWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameEngine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePlayTest" />
+      <option name="METHOD_NAME" value="checkForComputerWin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePlayTest.checkForDiagonalWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameEngine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePlayTest" />
+      <option name="METHOD_NAME" value="checkForDiagonalWin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePlayTest.checkForRowWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GameEngine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePlayTest" />
+      <option name="METHOD_NAME" value="checkForRowWin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GamePlayTest" />
+        <item itemvalue="JUnit.GamePlayTest.checkForComputerWin" />
+        <item itemvalue="JUnit.GamePlayTest.checkForDiagonalWin" />
+        <item itemvalue="JUnit.GamePlayTest.checkForColWin" />
+        <item itemvalue="JUnit.GamePlayTest.checkForRowWin" />
       </list>
     </recent_temporary>
   </component>
@@ -79,6 +143,21 @@
       <option name="presentableId" value="Default" />
       <updated>1703858173033</updated>
     </task>
+    <task id="LOCAL-00001" summary="make the logic work">
+      <created>1703867522077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703867522078</updated>
+    </task>
+    <task id="LOCAL-00002" summary="make the logic work">
+      <created>1703867770476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703867770477</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,5 +170,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="make the logic work" />
+    <MESSAGE value="(S) Isolation of concern &amp; Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="(S) Isolation of concern &amp; Test" />
   </component>
 </project>
